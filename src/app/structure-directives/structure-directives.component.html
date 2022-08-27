@@ -1,0 +1,57 @@
+<p>structure-directives works!</p>
+
+Add or Remove eleme nts from the DOM
+
+ngIf
+ngSwitch
+ngFor
+
+
+<h2 *ngIf="false">
+    Hello world
+</h2>
+
+<h2 *ngIf="displayText">
+    Hello Hassan
+</h2>
+
+<div *ngIf="isLoggedIn; then thenBlock ; else elseBlock"></div>
+
+<ng-template #elseBlock>
+    <h2>
+        Hello Guest
+    </h2>
+</ng-template>
+
+<ng-template #thenBlock>
+    <h2>
+        Hello Abanoub
+    </h2>
+</ng-template>
+
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'">You select red color</div>
+    <div *ngSwitchCase="'blue'">You select blue color</div>
+    <div *ngSwitchCase="'green'">You select green color</div>
+    <div *ngSwitchDefault>Pick a color again</div>
+</div>
+
+<div *ngFor="let item of cars ; index as i; even as e ; odd as o ; first as f">
+
+    <div *ngIf="f==true">
+        {{"My car"}} 
+    </div>
+    {{item}} -{{i}} -{{e}} -{{o}}
+</div>
+
+<table class="table table-hover">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+
+    <tr *ngFor="let item of persons">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+    </tr>
+</table>
