@@ -9,7 +9,7 @@ import { User } from '../User';
 export class EmployeeService {
 
   constructor(private http:HttpClient) { }
-  url:string='/assets/Data/employes.json'
+  url:string='/assets/Data/employees.json'
   postUrl:string="https://jsonplaceholder.typicode.com/pots";
   getEmployees():Observable<IEmployee[]>
   {

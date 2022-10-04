@@ -24,6 +24,13 @@ import { ChildComponent } from './child/child.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import {HttpClientModule} from '@angular/common/http';
+import { DepartmentsComponent } from './departments/departments.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DepartmentDetailsComponent } from './department-details/department-details.component';
+import { ContactInfoComponent } from './contact-info/contact-info.component';
+import { OverviewComponent } from './overview/overview.component';
+import { AuthModule } from 'src/auth/auth.module';
+import { TdfComponent } from './tdf/tdf.component';
 
 @NgModule({
   declarations: [
@@ -46,13 +53,20 @@ import {HttpClientModule} from '@angular/common/http';
     ParentComponent,
     ChildComponent,
     EmployeeListComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    DepartmentsComponent,
+    PageNotFoundComponent,
+    DepartmentDetailsComponent,
+    ContactInfoComponent,
+    OverviewComponent,
+    TdfComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
