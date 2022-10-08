@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../User';
+import { UserFormService } from '../user-form.service';
+import { UserForm } from '../userForm';
 
 @Component({
   selector: 'app-tdf',
@@ -7,11 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TdfComponent implements OnInit {
 
-  constructor() { }
+  constructor(private UserFormService:UserFormService) { }
 
-  topics=["Angular","React","Vue"]
+  topics=["Angular","React","Vue"];
+  userModel:UserForm= new UserForm('','','','',false);
 
   ngOnInit(): void {
+  }
+
+  saveUser()
+  {
+   this.UserFormService.SaveUser(this.userModel);
   }
 
 }

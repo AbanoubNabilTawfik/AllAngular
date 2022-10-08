@@ -15,7 +15,7 @@ import { StyleBindingComponent } from './style-binding/style-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TemplateReferenceVariableComponent } from './template-reference-variable/template-reference-variable.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StructureDirectivesComponent } from './structure-directives/structure-directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { SquarePipe } from './square.pipe';
@@ -31,6 +31,7 @@ import { ContactInfoComponent } from './contact-info/contact-info.component';
 import { OverviewComponent } from './overview/overview.component';
 import { AuthModule } from 'src/auth/auth.module';
 import { TdfComponent } from './tdf/tdf.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -59,14 +60,16 @@ import { TdfComponent } from './tdf/tdf.component';
     DepartmentDetailsComponent,
     ContactInfoComponent,
     OverviewComponent,
-    TdfComponent
+    TdfComponent,
+    ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    AuthModule
+    AuthModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
